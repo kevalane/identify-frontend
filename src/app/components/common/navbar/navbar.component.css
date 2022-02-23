@@ -83,7 +83,6 @@ hr {
 
 .normalLink > a:hover {
     color: #000 !important;
-    text-decoration: none;
 }
 
 #logout:hover {
