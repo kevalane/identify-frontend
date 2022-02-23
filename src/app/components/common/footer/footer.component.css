@@ -1,0 +1,28 @@
+footer {
+    background: #000033 !important;
+    position: relative;
+}
+
+#footerNav {
+    
+}
+
+#footerUl {
+    list-style: none;
+    padding: 1rem;
+}
+
+#footerUl > li { 
+    display: inline-block;
+    padding: .5rem;
+}
+
+#footerUl > li > a {
+    color: #6c757d;
+    text-decoration: underline;
+}
+
+#footerUl > li > a:hover {
+    color: #fff;
+    cursor: pointer;
+}
