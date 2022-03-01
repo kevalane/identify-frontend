@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fonts */
+@font-face {
+    font-family: Montserrat;
+    src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('assets/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
+/* Global styles */
+body {
+    background: #F4F3FA;
+}
+
+* {
+    font-family: Montserrat;
+}

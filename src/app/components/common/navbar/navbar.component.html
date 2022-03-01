@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <!-- <a class="navbar-brand" routerLink="/" id="logo">whatup</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Mobile Nav -->
+            <ul class="navbar-nav">
+                <li class="nav-item d-none d-lg-inline normalLink"><a routerLink="/contact" style="padding-right: 2rem;">Support</a></li>
+                <li class="nav-item d-none d-lg-inline normalLink"><a routerLink="/contact">För Privatpersoner</a></li>
+            </ul>
+            <img src="assets/img/logo-blackblue.png" id="centerLogo">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="filler">
+                <span class="d-lg-none" id="mobileItems">
+                    <hr>
+                    <li class="nav-item mobile">
+                        <a routerLink="/contact" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><fa-icon [icon]="faEnvelope"></fa-icon>Kontakt</a>
+                    </li>
+                    <hr>
+                </span>
+            </ul><!-- ./Mobile nav -->
+
+            <!-- Right nav, desktop -->
+            <ul class="navbar-nav ml-auto navbar-right">
+                <li class="nav-item d-none d-lg-inline normalLink"><a routerLink="/contact">För utvecklare</a></li>
+            </ul><!-- ./Right nav-->
+        </div><!-- Collapse-->
+    </div><!-- ./container-->
+</nav>

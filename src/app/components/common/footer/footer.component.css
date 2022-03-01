@@ -1,0 +1,35 @@
+footer {
+    background: #080929 !important;
+    position: relative;
+    height: 7rem;
+}
+
+#logo {
+    margin-top: 1.5rem;
+}
+
+#logoImage {
+    height: 3rem;
+}
+
+#footerUl {
+    list-style: none;
+    float: right;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+#footerUl > li { 
+    display: inline-block;
+    padding-left: 1.5rem;
+}
+
+#footerUl > li > a {
+    color: #6c757d;
+    text-decoration: underline;
+}
+
+#footerUl > li > a:hover {
+    color: #fff;
+    cursor: pointer;
+}
