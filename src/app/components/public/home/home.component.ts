@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   public ssnForm: FormGroup;
   public submitted: boolean;
   public loading: boolean;
+  public success: boolean;
+  public msg: string;
 
   constructor(private fb: FormBuilder, private auth: AuthService) {
     this.ssnForm = this.fb.group({
@@ -19,6 +21,8 @@ export class HomeComponent implements OnInit {
     });
     this.submitted = false;
     this.loading = false;
+    this.success = false;
+    this.msg = '';
   }
 
   ngOnInit(): void {
@@ -36,11 +40,15 @@ export class HomeComponent implements OnInit {
       return;
     }
 
+    console.log(this.ssnForm.value.ssn);
+
     this.auth.initSign(this.ssnForm.value.ssn).subscribe({
       next: (data: any) => {
-        console.log(data);
+        this.success = true;
+        this.msg = data['msg'];
       }, error: (err: any) => {
-        console.log(err);
+        this.success = false;
+        this.msg = err.error.message;
       }
     })
   }
