@@ -45,6 +45,8 @@ export class HomeComponent implements OnInit {
     this.auth.initSign(this.ssnForm.value.ssn).subscribe({
       next: (data: any) => {
         this.success = true;
+        console.log(data);
+        window.location.href = 'bankid:///?autostarttoken=' + data['data']['autoStartToken'] + '&redirect=null';
         this.msg = data['msg'];
       }, error: (err: any) => {
         this.success = false;
