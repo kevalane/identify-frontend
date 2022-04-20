@@ -1,13 +1,23 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 offset-lg-4">
-            <div id="qr">
+            <!-- <div id="qr">
                 <img src="assets/img/qr.png" class="qrImage">
+                
                 <p class="text-center"><strong>Scanna qr-koden med ditt mobila BankID</strong></p>
                 <br>
-            </div>
-            <br>
-            <button class="btn btn-primary" id="idButton">Påbörja identifiering</button>
+            </div> -->
+            <form class="ssnForm" [formGroup]="ssnForm" (ngSubmit)="initSign()">
+                <input type="text" placeholder="YYYYMMDDXXXX" formControlName="ssn" class="form-control" [ngClass]="{'is-invalid': submitted && f['ssn'].hasError('required')}">
+                <div *ngIf="submitted && f['ssn'].hasError('required')" class="invalid-feedback">
+                    <div>Du måste fylla i ett personnummer.</div>
+                </div>
+                <br>
+                <button class="btn btn-primary submitButton" type="submit" id="idButton" [ngClass]="{'animated shake': submitted && ssnForm.invalid || submitted && (success == false && msg)}">Logga in <div *ngIf="loading" class="spinner-border spinner-border-sm"></div></button>
+                <br><br>
+                <div id="danger" class="alert alert-danger" *ngIf="success == false && msg">{{msg}}</div>
+                <div id="success" class="alert alert-success" *ngIf="success && msg">{{msg}}</div>
+            </form>
             <button class="btn btn-default" id="otherButton">Annat ID >></button>
         </div>
     </div>

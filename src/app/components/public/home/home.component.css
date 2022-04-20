@@ -29,3 +29,7 @@
     padding: .7rem 2rem;
     margin-top: .7rem;
 }
+
+input {
+    padding: 1rem;
+}
